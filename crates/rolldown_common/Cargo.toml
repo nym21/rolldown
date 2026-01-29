@@ -1,7 +1,6 @@
 [package]
-name = "rolldown_common"
-version = "0.1.0"
-publish = true
+name = "brk_rolldown_common"
+version.workspace = true
 description = "This crate is mostly for sharing code between rolldwon crates."
 
 edition.workspace = true

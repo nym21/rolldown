@@ -1,12 +1,13 @@
 [package]
-name = "rolldown_plugin_isolated_declaration"
-version = "0.1.0"
+name = "brk_rolldown_plugin_isolated_declaration"
+version.workspace = true
 edition.workspace = true
 homepage.workspace = true
 license.workspace = true
 publish = true
 repository.workspace = true
 description = "Rolldown plugin for TypeScript isolated declarations"
+exclude = ["tests"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
@@ -25,5 +26,5 @@ rolldown_plugin = { workspace = true }
 sugar_path = { workspace = true }
 
 [dev-dependencies]
-rolldown_testing = { path = '../rolldown_testing' }
+# rolldown_testing = { workspace = true }
 testing_macros = { workspace = true }

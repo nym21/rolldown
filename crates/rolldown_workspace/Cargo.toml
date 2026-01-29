@@ -1,6 +1,6 @@
 [package]
-name = "rolldown_workspace"
-version = "0.1.0"
+name = "brk_rolldown_workspace"
+version.workspace = true
 edition.workspace = true
 homepage.workspace = true
 license.workspace = true

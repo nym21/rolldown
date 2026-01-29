@@ -1,8 +1,8 @@
 [package]
-name = "rolldown_sourcemap"
-version = "0.1.0"
+name = "brk_rolldown_sourcemap"
+description = "brk fork of rolldown_sourcemap"
+version.workspace = true
 publish = true
-description = "Source map generation and manipulation for Rolldown"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 

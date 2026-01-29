@@ -1,6 +1,7 @@
 [package]
-name = "generator"
-version = "0.1.0"
+name = "brk_generator"
+description = "brk fork of generator"
+version.workspace = true
 edition.workspace = true
 homepage.workspace = true
 license.workspace = true

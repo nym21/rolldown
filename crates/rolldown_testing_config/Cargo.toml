@@ -1,6 +1,7 @@
 [package]
-name = "rolldown_testing_config"
-version = "0.1.0"
+name = "brk_rolldown_testing_config"
+description = "brk fork of rolldown_testing_config"
+version.workspace = true
 edition.workspace = true
 homepage.workspace = true
 license.workspace = true

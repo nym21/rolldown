@@ -1,7 +1,6 @@
 [package]
-name = "rolldown_resolver"
-version = "0.1.0"
-publish = true
+name = "brk_rolldown_resolver"
+version.workspace = true
 description = "rolldown_resolver"
 
 edition.workspace = true

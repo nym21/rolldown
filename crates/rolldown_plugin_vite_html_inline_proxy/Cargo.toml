@@ -1,6 +1,7 @@
 [package]
-name = "rolldown_plugin_vite_html_inline_proxy"
-version = "0.1.0"
+name = "brk_rolldown_plugin_vite_html_inline_proxy"
+description = "brk fork of rolldown_plugin_html_inline_proxy"
+version.workspace = true
 edition.workspace = true
 homepage.workspace = true
 license.workspace = true

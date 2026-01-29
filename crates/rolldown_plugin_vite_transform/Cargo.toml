@@ -1,6 +1,6 @@
 [package]
-name = "rolldown_plugin_vite_transform"
-version = "0.1.0"
+name = "brk_rolldown_plugin_vite_transform"
+version.workspace = true
 edition.workspace = true
 homepage.workspace = true
 license.workspace = true

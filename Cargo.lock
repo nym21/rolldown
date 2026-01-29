@@ -145,18 +145,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "bench"
-version = "0.1.0"
-dependencies = [
- "criterion2",
- "rolldown",
- "rolldown_common",
- "rolldown_testing",
- "rolldown_workspace",
- "tokio",
-]
-
-[[package]]
 name = "bincode"
 version = "1.3.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -226,9 +214,914 @@ checksum = "dc0b364ead1874514c8c2855ab558056ebfeb775653e7ae45ff72f28f8f3166c"
 
 [[package]]
 name = "bpaf"
-version = "0.9.20"
+version = "0.9.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "473976d7a8620bb1e06dcdd184407c2363fe4fec8e983ee03ed9197222634a31"
+checksum = "4ffe12d9bbc54238745f1749c5a18dc5759e03c235618dd05554a9be350390b1"
+
+[[package]]
+name = "brk_bench"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown",
+ "brk_rolldown_common",
+ "brk_rolldown_testing",
+ "brk_rolldown_workspace",
+ "criterion2",
+ "tokio",
+]
+
+[[package]]
+name = "brk_generator"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "brk_rolldown_workspace",
+ "cow-utils",
+ "heck",
+ "oxc",
+ "oxc_resolver",
+ "prettyplease",
+ "proc-macro2",
+ "quote",
+ "regex",
+ "syn",
+]
+
+[[package]]
+name = "brk_ls-lint"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "brk_rolldown_workspace",
+ "globset",
+ "heck",
+ "ignore",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "brk_rolldown"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "append-only-vec",
+ "arcstr",
+ "bitflags 2.10.0",
+ "brk_rolldown_common",
+ "brk_rolldown_dev_common",
+ "brk_rolldown_devtools",
+ "brk_rolldown_ecmascript",
+ "brk_rolldown_ecmascript_utils",
+ "brk_rolldown_error",
+ "brk_rolldown_fs",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_chunk_import_map",
+ "brk_rolldown_plugin_data_uri",
+ "brk_rolldown_plugin_hmr",
+ "brk_rolldown_plugin_lazy_compilation",
+ "brk_rolldown_plugin_oxc_runtime",
+ "brk_rolldown_resolver",
+ "brk_rolldown_sourcemap",
+ "brk_rolldown_std_utils",
+ "brk_rolldown_tracing",
+ "brk_rolldown_utils",
+ "brk_rolldown_workspace",
+ "brk_string_wizard",
+ "commondir",
+ "cow-utils",
+ "css-module-lexer",
+ "dunce",
+ "futures",
+ "glob",
+ "indexmap",
+ "insta",
+ "itertools",
+ "itoa",
+ "json-escape-simd",
+ "memchr",
+ "oxc",
+ "oxc_allocator",
+ "oxc_ecmascript",
+ "oxc_index",
+ "oxc_traverse",
+ "petgraph",
+ "rayon",
+ "rolldown-notify",
+ "rustc-hash",
+ "serde",
+ "serde_json",
+ "serde_yaml",
+ "sugar_path",
+ "testing_macros",
+ "tokio",
+ "tracing",
+ "url",
+ "walkdir",
+ "xxhash-rust",
+]
+
+[[package]]
+name = "brk_rolldown_binding"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "async-channel",
+ "brk_rolldown",
+ "brk_rolldown_common",
+ "brk_rolldown_dev",
+ "brk_rolldown_devtools",
+ "brk_rolldown_error",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_esm_external_require",
+ "brk_rolldown_plugin_isolated_declaration",
+ "brk_rolldown_plugin_replace",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_plugin_vite_alias",
+ "brk_rolldown_plugin_vite_build_import_analysis",
+ "brk_rolldown_plugin_vite_dynamic_import_vars",
+ "brk_rolldown_plugin_vite_import_glob",
+ "brk_rolldown_plugin_vite_json",
+ "brk_rolldown_plugin_vite_load_fallback",
+ "brk_rolldown_plugin_vite_manifest",
+ "brk_rolldown_plugin_vite_module_preload_polyfill",
+ "brk_rolldown_plugin_vite_react_refresh_wrapper",
+ "brk_rolldown_plugin_vite_reporter",
+ "brk_rolldown_plugin_vite_resolve",
+ "brk_rolldown_plugin_vite_transform",
+ "brk_rolldown_plugin_vite_wasm_fallback",
+ "brk_rolldown_plugin_vite_wasm_helper",
+ "brk_rolldown_plugin_vite_web_worker_post",
+ "brk_rolldown_sourcemap",
+ "brk_rolldown_tracing",
+ "brk_rolldown_utils",
+ "brk_string_wizard",
+ "dashmap",
+ "derive_more",
+ "futures",
+ "itertools",
+ "mimalloc-safe",
+ "napi",
+ "napi-build",
+ "napi-derive",
+ "num_cpus",
+ "oxc",
+ "oxc_minify_napi",
+ "oxc_parser_napi",
+ "oxc_resolver_napi",
+ "oxc_transform_napi",
+ "rustc-hash",
+ "serde",
+ "serde_json",
+ "sugar_path",
+ "tracing",
+ "url",
+]
+
+[[package]]
+name = "brk_rolldown_common"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "bitflags 2.10.0",
+ "brk_rolldown_ecmascript",
+ "brk_rolldown_error",
+ "brk_rolldown_sourcemap",
+ "brk_rolldown_std_utils",
+ "brk_rolldown_utils",
+ "brk_string_wizard",
+ "dashmap",
+ "derive_more",
+ "fast-glob",
+ "insta",
+ "itertools",
+ "num-bigint",
+ "oxc",
+ "oxc_ecmascript",
+ "oxc_index",
+ "oxc_resolver",
+ "rustc-hash",
+ "schemars",
+ "serde",
+ "serde_json",
+ "simdutf8",
+ "sugar_path",
+ "tokio",
+]
+
+[[package]]
+name = "brk_rolldown_dev"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "brk_rolldown",
+ "brk_rolldown_common",
+ "brk_rolldown_dev_common",
+ "brk_rolldown_error",
+ "brk_rolldown_fs_watcher",
+ "brk_rolldown_utils",
+ "futures",
+ "rolldown-notify",
+ "rustc-hash",
+ "sugar_path",
+ "tokio",
+ "tracing",
+]
+
+[[package]]
+name = "brk_rolldown_dev_common"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_common",
+ "brk_rolldown_error",
+ "derive_more",
+ "schemars",
+ "serde",
+]
+
+[[package]]
+name = "brk_rolldown_devtools"
+version = "1.0.0-rc.2"
+dependencies = [
+ "blake3",
+ "brk_rolldown_devtools_action",
+ "dashmap",
+ "rustc-hash",
+ "serde",
+ "serde_json",
+ "tracing",
+ "tracing-subscriber",
+]
+
+[[package]]
+name = "brk_rolldown_devtools_action"
+version = "1.0.0-rc.2"
+dependencies = [
+ "serde",
+ "ts-rs",
+]
+
+[[package]]
+name = "brk_rolldown_ecmascript"
+version = "1.0.0-rc.2"
+dependencies = [
+ "arcstr",
+ "brk_rolldown_error",
+ "oxc",
+ "oxc_sourcemap",
+ "self_cell",
+]
+
+[[package]]
+name = "brk_rolldown_ecmascript_utils"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_common",
+ "brk_rolldown_utils",
+ "memchr",
+ "oxc",
+ "smallvec",
+]
+
+[[package]]
+name = "brk_rolldown_error"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "bitflags 2.10.0",
+ "derive_more",
+ "heck",
+ "napi",
+ "oxc",
+ "oxc_resolver",
+ "rolldown-ariadne",
+ "ropey",
+ "rustc-hash",
+ "sugar_path",
+]
+
+[[package]]
+name = "brk_rolldown_filter_analyzer"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_ecmascript",
+ "oxc",
+]
+
+[[package]]
+name = "brk_rolldown_fs"
+version = "1.0.0-rc.2"
+dependencies = [
+ "oxc_resolver",
+ "vfs",
+]
+
+[[package]]
+name = "brk_rolldown_fs_watcher"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_error",
+ "rolldown-notify",
+ "rolldown-notify-debouncer-full",
+]
+
+[[package]]
+name = "brk_rolldown_plugin"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "async-trait",
+ "bitflags 2.10.0",
+ "brk_rolldown_common",
+ "brk_rolldown_devtools",
+ "brk_rolldown_ecmascript",
+ "brk_rolldown_error",
+ "brk_rolldown_resolver",
+ "brk_rolldown_sourcemap",
+ "brk_rolldown_utils",
+ "brk_string_wizard",
+ "dashmap",
+ "derive_more",
+ "nodejs-built-in-modules",
+ "oxc_index",
+ "rustc-hash",
+ "serde",
+ "serde_json",
+ "sugar_path",
+ "tokio",
+ "tracing",
+ "typedmap",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_chunk_import_map"
+version = "1.0.0-rc.2"
+dependencies = [
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_utils",
+ "rustc-hash",
+ "serde_json",
+ "xxhash-rust",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_data_uri"
+version = "1.0.0-rc.2"
+dependencies = [
+ "arcstr",
+ "base64-simd",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_utils",
+ "simdutf8",
+ "urlencoding",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_esm_external_require"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_utils",
+ "nodejs-built-in-modules",
+ "rustc-hash",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_hmr"
+version = "1.0.0-rc.2"
+dependencies = [
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "oxc",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_isolated_declaration"
+version = "1.0.0-rc.2"
+dependencies = [
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_error",
+ "brk_rolldown_plugin",
+ "oxc",
+ "sugar_path",
+ "testing_macros",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_lazy_compilation"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_utils",
+ "oxc",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_oxc_runtime"
+version = "1.0.0-rc.2"
+dependencies = [
+ "arcstr",
+ "brk_rolldown_plugin",
+ "brk_rolldown_utils",
+ "phf",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_replace"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "brk_rolldown",
+ "brk_rolldown_plugin",
+ "brk_string_wizard",
+ "oxc",
+ "regex",
+ "regress",
+ "rustc-hash",
+ "tokio",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_utils"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_sourcemap",
+ "brk_rolldown_utils",
+ "cow-utils",
+ "dashmap",
+ "derive_more",
+ "itertools",
+ "memchr",
+ "percent-encoding",
+ "regex",
+ "rustc-hash",
+ "serde_json",
+ "sugar_path",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_alias"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_plugin",
+ "brk_rolldown_utils",
+ "cow-utils",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_asset"
+version = "1.0.0-rc.2"
+dependencies = [
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_utils",
+ "cow-utils",
+ "derive_more",
+ "serde_json",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_asset_import_meta_url"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "brk_rolldown_ecmascript_utils",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_utils",
+ "brk_string_wizard",
+ "cow-utils",
+ "derive_more",
+ "oxc",
+ "sugar_path",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_build_import_analysis"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_ecmascript_utils",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_string_wizard",
+ "derive_more",
+ "itertools",
+ "oxc",
+ "regex",
+ "rustc-hash",
+ "sugar_path",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_css"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "base64-simd",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_sourcemap",
+ "brk_rolldown_utils",
+ "derive_more",
+ "rustc-hash",
+ "serde_json",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_css_post"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "base64-simd",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_utils",
+ "brk_string_wizard",
+ "cow-utils",
+ "derive_more",
+ "regex",
+ "rustc-hash",
+ "serde_json",
+ "sugar_path",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_dynamic_import_vars"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_utils",
+ "brk_string_wizard",
+ "cow-utils",
+ "derive_more",
+ "memchr",
+ "oxc",
+ "sugar_path",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_html"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_utils",
+ "brk_string_wizard",
+ "cow-utils",
+ "derive_more",
+ "html5gum",
+ "itoa",
+ "oxc",
+ "regex",
+ "rustc-hash",
+ "string_cache",
+ "sugar_path",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_html_inline_proxy"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_utils",
+ "sugar_path",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_import_glob"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "brk_rolldown_common",
+ "brk_rolldown_ecmascript_utils",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_utils",
+ "brk_string_wizard",
+ "fast-glob",
+ "itoa",
+ "oxc",
+ "sugar_path",
+ "walkdir",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_json"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_sourcemap",
+ "brk_rolldown_utils",
+ "memchr",
+ "serde_json",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_load_fallback"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_plugin",
+ "brk_rolldown_utils",
+ "memchr",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_manifest"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_utils",
+ "cow-utils",
+ "derive_more",
+ "rustc-hash",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_module_preload_polyfill"
+version = "1.0.0-rc.2"
+dependencies = [
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_react_refresh_wrapper"
+version = "1.0.0-rc.2"
+dependencies = [
+ "arcstr",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_utils",
+ "memchr",
+ "regex",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_reporter"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "cow-utils",
+ "flate2",
+ "itoa",
+ "num-format",
+ "owo-colors",
+ "rayon",
+ "sugar_path",
+ "terminal_size",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_resolve"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "brk_rolldown_utils",
+ "cow-utils",
+ "dashmap",
+ "derive_more",
+ "fast-glob",
+ "nodejs-built-in-modules",
+ "owo-colors",
+ "oxc_resolver",
+ "parking_lot",
+ "pnp",
+ "rustc-hash",
+ "serde",
+ "serde_json",
+ "sugar_path",
+ "url",
+ "urlencoding",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_transform"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_error",
+ "brk_rolldown_plugin",
+ "brk_rolldown_utils",
+ "itertools",
+ "memchr",
+ "oxc",
+ "oxc_resolver",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_wasm_fallback"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "brk_rolldown_plugin",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_wasm_helper"
+version = "1.0.0-rc.2"
+dependencies = [
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_plugin",
+ "brk_rolldown_plugin_utils",
+ "derive_more",
+]
+
+[[package]]
+name = "brk_rolldown_plugin_vite_web_worker_post"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_ecmascript_utils",
+ "brk_rolldown_plugin",
+ "oxc",
+]
+
+[[package]]
+name = "brk_rolldown_resolver"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "brk_rolldown_common",
+ "brk_rolldown_fs",
+ "brk_rolldown_utils",
+ "dashmap",
+ "itertools",
+ "oxc_resolver",
+ "sugar_path",
+]
+
+[[package]]
+name = "brk_rolldown_sourcemap"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_utils",
+ "criterion2",
+ "memchr",
+ "oxc",
+ "oxc_sourcemap",
+ "rustc-hash",
+]
+
+[[package]]
+name = "brk_rolldown_std_utils"
+version = "1.0.0-rc.2"
+dependencies = [
+ "regex",
+]
+
+[[package]]
+name = "brk_rolldown_testing"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "brk_rolldown",
+ "brk_rolldown_common",
+ "brk_rolldown_dev",
+ "brk_rolldown_error",
+ "brk_rolldown_sourcemap",
+ "brk_rolldown_testing_config",
+ "brk_rolldown_workspace",
+ "dunce",
+ "glob",
+ "insta",
+ "json-strip-comments",
+ "jsonschema",
+ "oxc",
+ "regex",
+ "rustc-hash",
+ "schemars",
+ "serde_json",
+ "sugar_path",
+ "tokio",
+ "urlencoding",
+]
+
+[[package]]
+name = "brk_rolldown_testing_config"
+version = "1.0.0-rc.2"
+dependencies = [
+ "brk_rolldown_common",
+ "brk_rolldown_dev_common",
+ "schemars",
+ "serde",
+ "serde_json",
+]
+
+[[package]]
+name = "brk_rolldown_tracing"
+version = "1.0.0-rc.2"
+dependencies = [
+ "tracing",
+ "tracing-chrome",
+ "tracing-subscriber",
+]
+
+[[package]]
+name = "brk_rolldown_utils"
+version = "1.0.0-rc.2"
+dependencies = [
+ "anyhow",
+ "arcstr",
+ "async-scoped",
+ "base-encode",
+ "base64-simd",
+ "brk_rolldown_error",
+ "brk_rolldown_std_utils",
+ "cow-utils",
+ "criterion2",
+ "dashmap",
+ "fast-glob",
+ "form_urlencoded",
+ "futures",
+ "indexmap",
+ "infer",
+ "itoa",
+ "memchr",
+ "mime",
+ "nom",
+ "oxc",
+ "oxc_index",
+ "phf",
+ "rayon",
+ "regex",
+ "regress",
+ "rustc-hash",
+ "serde_json",
+ "simdutf8",
+ "sugar_path",
+ "tokio",
+ "uuid",
+ "xxhash-rust",
+]
+
+[[package]]
+name = "brk_rolldown_workspace"
+version = "1.0.0-rc.2"
+
+[[package]]
+name = "brk_string_wizard"
+version = "1.0.0-rc.2"
+dependencies = [
+ "insta",
+ "memchr",
+ "oxc_index",
+ "oxc_sourcemap",
+ "regex",
+ "rustc-hash",
+ "serde",
+]
 
 [[package]]
 name = "bstr"
@@ -275,9 +1168,9 @@ dependencies = [
 
 [[package]]
 name = "cc"
-version = "1.2.46"
+version = "1.2.54"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b97463e1064cb1b1c1384ad0a0b9c8abd0988e2a91f52606c80ef14aadb63e36"
+checksum = "6354c81bbfd62d9cfa9cb3c773c2b7b2a3a482d569de977fd0e961f6e7c00583"
 dependencies = [
  "find-msvc-tools",
  "shlex",
@@ -335,9 +1228,9 @@ dependencies = [
 
 [[package]]
 name = "cmake"
-version = "0.1.54"
+version = "0.1.57"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e7caa3f9de89ddbe2c607f4101924c5abec803763ae9534e4f4d7d8f84aa81f0"
+checksum = "75443c44cd6b379beb8c5b45d85d0773baf31cce901fe7bb252f4eff3008ef7d"
 dependencies = [
  "cc",
 ]
@@ -348,7 +1241,7 @@ version = "0.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "0fa961b519f0b462e3a3b4a34b64d119eeaca1d59af726fe450bbba07a9fc0a1"
 dependencies = [
- "thiserror 2.0.17",
+ "thiserror 2.0.18",
 ]
 
 [[package]]
@@ -381,11 +1274,11 @@ dependencies = [
 
 [[package]]
 name = "colored"
-version = "3.0.0"
+version = "3.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fde0e0ec90c9dfb3b4b1a0891a7dcd0e2bffde2f7efed5fe7c9bb00e5bfb915e"
+checksum = "faf9468729b8cbcea668e36183cb69d317348c2e08e994829fb56ebfdfbaac34"
 dependencies = [
- "windows-sys 0.59.0",
+ "windows-sys 0.61.2",
 ]
 
 [[package]]
@@ -492,7 +1385,7 @@ dependencies = [
  "cast",
  "ciborium",
  "codspeed",
- "colored 3.0.0",
+ "colored 3.1.1",
  "num-traits",
  "oorandom",
  "serde",
@@ -553,9 +1446,9 @@ dependencies = [
 
 [[package]]
 name = "ctor"
-version = "0.6.1"
+version = "0.6.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3ffc71fcdcdb40d6f087edddf7f8f1f8f79e6cf922f555a9ee8779752d4819bd"
+checksum = "424e0138278faeb2b401f174ad17e715c829512d74f3d1e81eb43365c2e0590e"
 dependencies = [
  "ctor-proc-macro",
  "dtor",
@@ -583,18 +1476,9 @@ dependencies = [
 
 [[package]]
 name = "data-encoding"
-version = "2.9.0"
+version = "2.10.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2a2330da5de22e8a3cb63252ce2abb30116bf5265e89c0e01bc17015ce30a476"
-
-[[package]]
-name = "deranged"
-version = "0.5.5"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ececcb659e7ba858fb4f10388c250a7252eb0a27373f1a72b8748afdd248e587"
-dependencies = [
- "powerfmt",
-]
+checksum = "d7a1e2f27636f116493b8b860f5546edb47c8d8f8ea73e1d2a20be88e28d1fea"
 
 [[package]]
 name = "derive_more"
@@ -777,21 +1661,20 @@ checksum = "37909eebbb50d72f9059c3b6d82c0463f2ff062c9e95845c43a6c9c0355411be"
 
 [[package]]
 name = "filetime"
-version = "0.2.26"
+version = "0.2.27"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "bc0505cd1b6fa6580283f6bdf70a73fcf4aba1184038c90902b92b3dd0df63ed"
+checksum = "f98844151eee8917efc50bd9e8318cb963ae8b297431495d3f758616ea5c57db"
 dependencies = [
  "cfg-if",
  "libc",
  "libredox",
- "windows-sys 0.60.2",
 ]
 
 [[package]]
 name = "find-msvc-tools"
-version = "0.1.5"
+version = "0.1.8"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3a3076410a55c90011c298b04d0cfa770b00fa04e1e3c97d3f6c9de105a03844"
+checksum = "8591b0bcc8a98a64310a2fae1bb3e9b8564dd10e381e6e28010fde8e8e8568db"
 
 [[package]]
 name = "fixedbitset"
@@ -957,23 +1840,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "generator"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "cow-utils",
- "heck",
- "oxc",
- "oxc_resolver",
- "prettyplease",
- "proc-macro2",
- "quote",
- "regex",
- "rolldown_workspace",
- "syn",
-]
-
-[[package]]
 name = "generic-array"
 version = "0.14.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1131,9 +1997,9 @@ checksum = "7aedcccd01fc5fe81e6b489c15b247b8b0690feb23304303a9e560f37efc560a"
 
 [[package]]
 name = "icu_properties"
-version = "2.1.1"
+version = "2.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "e93fcd3157766c0c8da2f8cff6ce651a31f0810eaa1c51ec363ef790bbb5fb99"
+checksum = "020bfc02fe870ec3a66d93e677ccca0562506e5872c650f893269e08615d74ec"
 dependencies = [
  "icu_collections",
  "icu_locale_core",
@@ -1145,9 +2011,9 @@ dependencies = [
 
 [[package]]
 name = "icu_properties_data"
-version = "2.1.1"
+version = "2.1.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "02845b3647bb045f1100ecd6480ff52f34c35f82d9880e029d329c21d1054899"
+checksum = "616c294cf8d725c6afcd8f55abc17c56464ef6211f9ed59cccffe534129c77af"
 
 [[package]]
 name = "icu_provider"
@@ -1294,9 +2160,9 @@ checksum = "47f142fe24a9c9944451e8349de0a56af5f3e7226dc46f3ed4d4ecc0b85af75e"
 
 [[package]]
 name = "js-sys"
-version = "0.3.82"
+version = "0.3.85"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b011eec8cc36da2aab2d5cff675ec18454fad408585853910a202391cf9f8e65"
+checksum = "8c942ebf8e95485ca0d52d97da7c5a2c387d0e7f0ba4c35e93bfcaee045955b3"
 dependencies = [
  "once_cell",
  "wasm-bindgen",
@@ -1372,9 +2238,9 @@ checksum = "bbd2bcb4c963f2ddae06a2efc7e9f3591312473c50c6685e1f298068316e66fe"
 
 [[package]]
 name = "libc"
-version = "0.2.177"
+version = "0.2.180"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2874a2af47a2325c2001a6e6fad9b16a53b802102b528163885171cf92b15976"
+checksum = "bcc35a38544a891a5f7c865aca548a982ccb3b8650a5b06d0fd33a10283c56fc"
 
 [[package]]
 name = "libloading"
@@ -1399,13 +2265,13 @@ dependencies = [
 
 [[package]]
 name = "libredox"
-version = "0.1.10"
+version = "0.1.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "416f7e718bdb06000964960ffa43b4335ad4012ae8b99060261aa4a8088d5ccb"
+checksum = "3d0b95e02c851351f877147b7deea7b1afb1df71b63aa5f8270716e0c5720616"
 dependencies = [
  "bitflags 2.10.0",
  "libc",
- "redox_syscall",
+ "redox_syscall 0.7.0",
 ]
 
 [[package]]
@@ -1431,22 +2297,9 @@ dependencies = [
 
 [[package]]
 name = "log"
-version = "0.4.28"
+version = "0.4.29"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "34080505efa8e45a4b816c349525ebe327ceaa8559756f0356cba97ef3bf7432"
-
-[[package]]
-name = "ls-lint"
-version = "0.0.0"
-dependencies = [
- "anyhow",
- "globset",
- "heck",
- "ignore",
- "rolldown_workspace",
- "serde",
- "serde_json",
-]
+checksum = "5e5032e24019045c762d3c0f28f5b6b8bbf38563a65908389bf7978758920897"
 
 [[package]]
 name = "memchr"
@@ -1481,9 +2334,9 @@ dependencies = [
 
 [[package]]
 name = "mio"
-version = "1.1.0"
+version = "1.1.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "69d83b0086dc8ecf3ce9ae2874b2d1290252e2a30720bea58a5c6639b0092873"
+checksum = "a69bcab0ad47271a0234d9422b131806bf3968021e5dc9328caf2d4cd58557fc"
 dependencies = [
  "libc",
  "log",
@@ -1656,12 +2509,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "num-conv"
-version = "0.1.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "51d515d32fb182ee37cda2ccdcb92950d6a3c2893aa280e540671c2cd0f3b1d9"
-
-[[package]]
 name = "num-format"
 version = "0.4.4"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1794,18 +2641,16 @@ dependencies = [
 
 [[package]]
 name = "oxc-browserslist"
-version = "2.2.0"
+version = "2.3.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "23d55ecaab3af16fee2d0195f2e7d26f27cab0044d0b6d74073514c7feee6beb"
+checksum = "75b1853bc34cadaa90aa09f95713d8b77ec0c0d3e2d90ccf7a74216f40d20850"
 dependencies = [
  "flate2",
- "nom",
  "postcard",
  "rustc-hash",
  "serde",
  "serde_json",
- "thiserror 2.0.17",
- "time",
+ "thiserror 2.0.18",
 ]
 
 [[package]]
@@ -1818,7 +2663,7 @@ dependencies = [
  "owo-colors",
  "oxc-miette-derive",
  "textwrap",
- "thiserror 2.0.17",
+ "thiserror 2.0.18",
  "unicode-segmentation",
  "unicode-width",
 ]
@@ -2146,9 +2991,9 @@ dependencies = [
 
 [[package]]
 name = "oxc_resolver"
-version = "11.16.4"
+version = "11.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b903284699f550838a491118e58e9d9adb4941c2514f148aedff1ce4b4fbd578"
+checksum = "88c8cd25f7fd929d2d13ef85051d75240d2e4219e36547b4085e63e668e253d7"
 dependencies = [
  "cfg-if",
  "fast-glob",
@@ -2166,7 +3011,7 @@ dependencies = [
  "serde_json",
  "simd-json",
  "simdutf8",
- "thiserror 2.0.17",
+ "thiserror 2.0.18",
  "tracing",
  "url",
  "windows",
@@ -2174,9 +3019,9 @@ dependencies = [
 
 [[package]]
 name = "oxc_resolver_napi"
-version = "11.16.4"
+version = "11.17.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "ef026395511c5322f821310d8b7260a0e2d76e327a445af61834c3e97826b843"
+checksum = "d2303a50a894d54dc9071baa08c26ed13f1b801ca2e32ae80624cece9b3a582b"
 dependencies = [
  "fancy-regex",
  "napi",
@@ -2390,7 +3235,7 @@ checksum = "2621685985a2ebf1c516881c026032ac7deafcda1a2c9b7850dc81e3dfcb64c1"
 dependencies = [
  "cfg-if",
  "libc",
- "redox_syscall",
+ "redox_syscall 0.5.18",
  "smallvec",
  "windows-link",
 ]
@@ -2511,7 +3356,7 @@ dependencies = [
  "rustc-hash",
  "serde",
  "serde_json",
- "thiserror 2.0.17",
+ "thiserror 2.0.18",
 ]
 
 [[package]]
@@ -2534,12 +3379,6 @@ checksum = "b73949432f5e2a09657003c25bca5e19a0e9c84f8058ca374f49e0ebe605af77"
 dependencies = [
  "zerovec",
 ]
-
-[[package]]
-name = "powerfmt"
-version = "0.2.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "439ee305def115ba05938db6eb1644ff94165c5ab5e9420d1c1bcedbba909391"
 
 [[package]]
 name = "precomputed-hash"
@@ -2616,6 +3455,15 @@ name = "redox_syscall"
 version = "0.5.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ed2bf2547551a7053d6fdfafda3f938979645c44812fbfcda098faae3f1a362d"
+dependencies = [
+ "bitflags 2.10.0",
+]
+
+[[package]]
+name = "redox_syscall"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "49f3fe0889e69e2ae9e41f4d6c4c0181701d00e4697b356fb1f74173a5e0ee27"
 dependencies = [
  "bitflags 2.10.0",
 ]
@@ -2701,70 +3549,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "ba39f3699c378cd8970968dcbff9c43159ea4cfbd88d43c00b22f2ef10a435d2"
 
 [[package]]
-name = "rolldown"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "append-only-vec",
- "arcstr",
- "bitflags 2.10.0",
- "commondir",
- "cow-utils",
- "css-module-lexer",
- "dunce",
- "futures",
- "glob",
- "indexmap",
- "insta",
- "itertools",
- "itoa",
- "json-escape-simd",
- "memchr",
- "oxc",
- "oxc_allocator",
- "oxc_ecmascript",
- "oxc_index",
- "oxc_traverse",
- "petgraph",
- "rayon",
- "regex",
- "rolldown-notify",
- "rolldown_common",
- "rolldown_dev",
- "rolldown_dev_common",
- "rolldown_devtools",
- "rolldown_ecmascript",
- "rolldown_ecmascript_utils",
- "rolldown_error",
- "rolldown_fs",
- "rolldown_plugin",
- "rolldown_plugin_chunk_import_map",
- "rolldown_plugin_data_uri",
- "rolldown_plugin_hmr",
- "rolldown_plugin_lazy_compilation",
- "rolldown_plugin_oxc_runtime",
- "rolldown_resolver",
- "rolldown_sourcemap",
- "rolldown_std_utils",
- "rolldown_testing",
- "rolldown_tracing",
- "rolldown_utils",
- "rolldown_workspace",
- "rustc-hash",
- "serde",
- "serde_json",
- "serde_yaml",
- "string_wizard",
- "sugar_path",
- "testing_macros",
- "tokio",
- "tracing",
- "url",
- "walkdir",
- "xxhash-rust",
-]
-
-[[package]]
 name = "rolldown-ariadne"
 version = "0.5.3"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2822,797 +3606,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1931923a28e14c01a27ca56669669eb3e3de4068859c34e17b96c93ba3a61afe"
 
 [[package]]
-name = "rolldown_binding"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "async-channel",
- "dashmap",
- "derive_more",
- "futures",
- "itertools",
- "mimalloc-safe",
- "napi",
- "napi-build",
- "napi-derive",
- "num_cpus",
- "oxc",
- "oxc_minify_napi",
- "oxc_parser_napi",
- "oxc_resolver_napi",
- "oxc_transform_napi",
- "rolldown",
- "rolldown_common",
- "rolldown_dev",
- "rolldown_devtools",
- "rolldown_error",
- "rolldown_plugin",
- "rolldown_plugin_esm_external_require",
- "rolldown_plugin_isolated_declaration",
- "rolldown_plugin_replace",
- "rolldown_plugin_utils",
- "rolldown_plugin_vite_alias",
- "rolldown_plugin_vite_build_import_analysis",
- "rolldown_plugin_vite_dynamic_import_vars",
- "rolldown_plugin_vite_import_glob",
- "rolldown_plugin_vite_json",
- "rolldown_plugin_vite_load_fallback",
- "rolldown_plugin_vite_manifest",
- "rolldown_plugin_vite_module_preload_polyfill",
- "rolldown_plugin_vite_react_refresh_wrapper",
- "rolldown_plugin_vite_reporter",
- "rolldown_plugin_vite_resolve",
- "rolldown_plugin_vite_transform",
- "rolldown_plugin_vite_wasm_fallback",
- "rolldown_plugin_vite_wasm_helper",
- "rolldown_plugin_vite_web_worker_post",
- "rolldown_sourcemap",
- "rolldown_tracing",
- "rolldown_utils",
- "rustc-hash",
- "serde",
- "serde_json",
- "string_wizard",
- "sugar_path",
- "tracing",
- "url",
-]
-
-[[package]]
-name = "rolldown_common"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "bitflags 2.10.0",
- "dashmap",
- "derive_more",
- "fast-glob",
- "insta",
- "itertools",
- "num-bigint",
- "oxc",
- "oxc_ecmascript",
- "oxc_index",
- "oxc_resolver",
- "rolldown_ecmascript",
- "rolldown_error",
- "rolldown_sourcemap",
- "rolldown_std_utils",
- "rolldown_utils",
- "rustc-hash",
- "schemars",
- "serde",
- "serde_json",
- "simdutf8",
- "string_wizard",
- "sugar_path",
- "tokio",
-]
-
-[[package]]
-name = "rolldown_dev"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "futures",
- "rolldown",
- "rolldown-notify",
- "rolldown_common",
- "rolldown_dev_common",
- "rolldown_error",
- "rolldown_fs_watcher",
- "rolldown_utils",
- "rustc-hash",
- "sugar_path",
- "tokio",
- "tracing",
-]
-
-[[package]]
-name = "rolldown_dev_common"
-version = "0.1.0"
-dependencies = [
- "derive_more",
- "rolldown_common",
- "rolldown_error",
- "schemars",
- "serde",
-]
-
-[[package]]
-name = "rolldown_devtools"
-version = "0.1.0"
-dependencies = [
- "blake3",
- "dashmap",
- "rolldown_devtools_action",
- "rustc-hash",
- "serde",
- "serde_json",
- "tracing",
- "tracing-subscriber",
-]
-
-[[package]]
-name = "rolldown_devtools_action"
-version = "0.1.0"
-dependencies = [
- "serde",
- "ts-rs",
-]
-
-[[package]]
-name = "rolldown_ecmascript"
-version = "0.1.0"
-dependencies = [
- "arcstr",
- "oxc",
- "oxc_sourcemap",
- "rolldown_error",
- "self_cell",
-]
-
-[[package]]
-name = "rolldown_ecmascript_utils"
-version = "0.1.0"
-dependencies = [
- "memchr",
- "oxc",
- "rolldown_common",
- "rolldown_utils",
- "smallvec",
-]
-
-[[package]]
-name = "rolldown_error"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "bitflags 2.10.0",
- "derive_more",
- "heck",
- "napi",
- "oxc",
- "oxc_resolver",
- "rolldown-ariadne",
- "ropey",
- "rustc-hash",
- "sugar_path",
-]
-
-[[package]]
-name = "rolldown_filter_analyzer"
-version = "0.1.0"
-dependencies = [
- "oxc",
- "rolldown_ecmascript",
-]
-
-[[package]]
-name = "rolldown_fs"
-version = "0.1.0"
-dependencies = [
- "oxc_resolver",
- "vfs",
-]
-
-[[package]]
-name = "rolldown_fs_watcher"
-version = "0.1.0"
-dependencies = [
- "rolldown-notify",
- "rolldown-notify-debouncer-full",
- "rolldown_error",
-]
-
-[[package]]
-name = "rolldown_plugin"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "async-trait",
- "bitflags 2.10.0",
- "dashmap",
- "derive_more",
- "nodejs-built-in-modules",
- "oxc_index",
- "rolldown_common",
- "rolldown_devtools",
- "rolldown_ecmascript",
- "rolldown_error",
- "rolldown_resolver",
- "rolldown_sourcemap",
- "rolldown_utils",
- "rustc-hash",
- "serde",
- "serde_json",
- "string_wizard",
- "sugar_path",
- "tokio",
- "tracing",
- "typedmap",
-]
-
-[[package]]
-name = "rolldown_plugin_chunk_import_map"
-version = "0.1.0"
-dependencies = [
- "arcstr",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_utils",
- "rustc-hash",
- "serde_json",
- "xxhash-rust",
-]
-
-[[package]]
-name = "rolldown_plugin_data_uri"
-version = "0.1.0"
-dependencies = [
- "arcstr",
- "base64-simd",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_utils",
- "simdutf8",
- "urlencoding",
-]
-
-[[package]]
-name = "rolldown_plugin_esm_external_require"
-version = "0.1.0"
-dependencies = [
- "nodejs-built-in-modules",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_utils",
- "rustc-hash",
-]
-
-[[package]]
-name = "rolldown_plugin_hmr"
-version = "0.1.0"
-dependencies = [
- "arcstr",
- "oxc",
- "rolldown_common",
- "rolldown_plugin",
-]
-
-[[package]]
-name = "rolldown_plugin_isolated_declaration"
-version = "0.1.0"
-dependencies = [
- "arcstr",
- "oxc",
- "rolldown_common",
- "rolldown_error",
- "rolldown_plugin",
- "rolldown_testing",
- "sugar_path",
- "testing_macros",
-]
-
-[[package]]
-name = "rolldown_plugin_lazy_compilation"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "oxc",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_utils",
-]
-
-[[package]]
-name = "rolldown_plugin_oxc_runtime"
-version = "0.1.0"
-dependencies = [
- "arcstr",
- "phf",
- "rolldown_plugin",
- "rolldown_utils",
-]
-
-[[package]]
-name = "rolldown_plugin_replace"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "oxc",
- "regex",
- "regress",
- "rolldown",
- "rolldown_plugin",
- "rolldown_testing",
- "rustc-hash",
- "string_wizard",
- "tokio",
-]
-
-[[package]]
-name = "rolldown_plugin_utils"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "cow-utils",
- "dashmap",
- "derive_more",
- "itertools",
- "memchr",
- "percent-encoding",
- "regex",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_sourcemap",
- "rolldown_utils",
- "rustc-hash",
- "serde_json",
- "sugar_path",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_alias"
-version = "0.1.0"
-dependencies = [
- "cow-utils",
- "rolldown_plugin",
- "rolldown_utils",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_asset"
-version = "0.1.0"
-dependencies = [
- "arcstr",
- "cow-utils",
- "derive_more",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_utils",
- "serde_json",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_asset_import_meta_url"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "cow-utils",
- "derive_more",
- "oxc",
- "rolldown_ecmascript_utils",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_utils",
- "string_wizard",
- "sugar_path",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_build_import_analysis"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "derive_more",
- "itertools",
- "oxc",
- "regex",
- "rolldown_common",
- "rolldown_ecmascript_utils",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rustc-hash",
- "string_wizard",
- "sugar_path",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_css"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "base64-simd",
- "derive_more",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_sourcemap",
- "rolldown_utils",
- "rustc-hash",
- "serde_json",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_css_post"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "base64-simd",
- "cow-utils",
- "derive_more",
- "regex",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_utils",
- "rustc-hash",
- "serde_json",
- "string_wizard",
- "sugar_path",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_dynamic_import_vars"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "cow-utils",
- "derive_more",
- "memchr",
- "oxc",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_utils",
- "string_wizard",
- "sugar_path",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_html"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "cow-utils",
- "derive_more",
- "html5gum",
- "itoa",
- "oxc",
- "regex",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_utils",
- "rustc-hash",
- "string_cache",
- "string_wizard",
- "sugar_path",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_html_inline_proxy"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_utils",
- "sugar_path",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_import_glob"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "fast-glob",
- "itoa",
- "oxc",
- "rolldown_common",
- "rolldown_ecmascript_utils",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_utils",
- "string_wizard",
- "sugar_path",
- "walkdir",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_json"
-version = "0.1.0"
-dependencies = [
- "memchr",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_sourcemap",
- "rolldown_utils",
- "serde_json",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_load_fallback"
-version = "0.1.0"
-dependencies = [
- "memchr",
- "rolldown_plugin",
- "rolldown_utils",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_manifest"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "cow-utils",
- "derive_more",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_utils",
- "rustc-hash",
- "serde",
- "serde_json",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_module_preload_polyfill"
-version = "0.1.0"
-dependencies = [
- "arcstr",
- "rolldown_common",
- "rolldown_plugin",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_react_refresh_wrapper"
-version = "0.1.0"
-dependencies = [
- "arcstr",
- "memchr",
- "regex",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_utils",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_reporter"
-version = "0.1.0"
-dependencies = [
- "cow-utils",
- "flate2",
- "itoa",
- "num-format",
- "owo-colors",
- "rayon",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "sugar_path",
- "terminal_size",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_resolve"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "cow-utils",
- "dashmap",
- "derive_more",
- "fast-glob",
- "nodejs-built-in-modules",
- "owo-colors",
- "oxc_resolver",
- "parking_lot",
- "pnp",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_plugin_utils",
- "rolldown_utils",
- "rustc-hash",
- "serde",
- "serde_json",
- "sugar_path",
- "url",
- "urlencoding",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_transform"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "itertools",
- "memchr",
- "oxc",
- "oxc_resolver",
- "rolldown_common",
- "rolldown_error",
- "rolldown_plugin",
- "rolldown_utils",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_wasm_fallback"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "rolldown_plugin",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_wasm_helper"
-version = "0.1.0"
-dependencies = [
- "arcstr",
- "derive_more",
- "rolldown_common",
- "rolldown_plugin",
- "rolldown_plugin_utils",
-]
-
-[[package]]
-name = "rolldown_plugin_vite_web_worker_post"
-version = "0.1.0"
-dependencies = [
- "oxc",
- "rolldown_ecmascript_utils",
- "rolldown_plugin",
-]
-
-[[package]]
-name = "rolldown_resolver"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "dashmap",
- "itertools",
- "oxc_resolver",
- "rolldown_common",
- "rolldown_fs",
- "rolldown_utils",
- "sugar_path",
-]
-
-[[package]]
-name = "rolldown_sourcemap"
-version = "0.1.0"
-dependencies = [
- "criterion2",
- "memchr",
- "oxc",
- "oxc_sourcemap",
- "rolldown_utils",
- "rustc-hash",
-]
-
-[[package]]
-name = "rolldown_std_utils"
-version = "0.1.0"
-dependencies = [
- "regex",
-]
-
-[[package]]
-name = "rolldown_testing"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "dunce",
- "glob",
- "insta",
- "json-strip-comments",
- "jsonschema",
- "oxc",
- "regex",
- "rolldown",
- "rolldown_common",
- "rolldown_dev",
- "rolldown_error",
- "rolldown_sourcemap",
- "rolldown_testing_config",
- "rolldown_workspace",
- "rustc-hash",
- "schemars",
- "serde_json",
- "sugar_path",
- "tokio",
- "urlencoding",
-]
-
-[[package]]
-name = "rolldown_testing_config"
-version = "0.1.0"
-dependencies = [
- "rolldown_common",
- "rolldown_dev_common",
- "schemars",
- "serde",
- "serde_json",
-]
-
-[[package]]
-name = "rolldown_tracing"
-version = "0.1.0"
-dependencies = [
- "tracing",
- "tracing-chrome",
- "tracing-subscriber",
-]
-
-[[package]]
-name = "rolldown_utils"
-version = "0.1.0"
-dependencies = [
- "anyhow",
- "arcstr",
- "async-scoped",
- "base-encode",
- "base64-simd",
- "cow-utils",
- "criterion2",
- "dashmap",
- "fast-glob",
- "form_urlencoded",
- "futures",
- "indexmap",
- "infer",
- "itoa",
- "memchr",
- "mime",
- "nom",
- "oxc",
- "oxc_index",
- "phf",
- "rayon",
- "regex",
- "regress",
- "rolldown_error",
- "rolldown_std_utils",
- "rustc-hash",
- "serde_json",
- "simdutf8",
- "sugar_path",
- "tokio",
- "uuid",
- "xxhash-rust",
-]
-
-[[package]]
-name = "rolldown_workspace"
-version = "0.1.0"
-
-[[package]]
 name = "ropey"
 version = "1.6.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3658,9 +3651,9 @@ checksum = "b39cdef0fa800fc44525c84ccb54a029961a8215f9619753635a9c0d2538d46d"
 
 [[package]]
 name = "ryu"
-version = "1.0.20"
+version = "1.0.22"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "28d3b2b1366ec20994f1fd18c3c594f05c5dd4bc44d8bb0c1c632c8d6829481f"
+checksum = "a50f4cf475b65d88e057964e0e9bb1f0aa9bbb2036dc65c64596b42932536984"
 
 [[package]]
 name = "same-file"
@@ -3856,9 +3849,9 @@ checksum = "bbbb5d9659141646ae647b42fe094daf6c6192d1620870b449d9557f748b2daa"
 
 [[package]]
 name = "siphasher"
-version = "1.0.1"
+version = "1.0.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "56199f7ddabf13fe5074ce809e7d3f42b42ae711800501b5b16ea82ad029c39d"
+checksum = "b2aa850e253778c88a04c3d7323b043aeda9d3e30d5971937c1855769763678e"
 
 [[package]]
 name = "slab"
@@ -3923,19 +3916,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "string_wizard"
-version = "0.0.27"
-dependencies = [
- "insta",
- "memchr",
- "oxc_index",
- "oxc_sourcemap",
- "regex",
- "rustc-hash",
- "serde",
-]
-
-[[package]]
 name = "sugar_path"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -3987,9 +3967,9 @@ dependencies = [
 
 [[package]]
 name = "tempfile"
-version = "3.23.0"
+version = "3.24.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "2d31c77bdf42a745371d260a26ca7163f1e0924b64afa0b688e61b5a9fa02f16"
+checksum = "655da9c7eb6305c55742045d5a8d2037996d61d8de95806335c7c86ce0f82e9c"
 dependencies = [
  "fastrand",
  "getrandom",
@@ -4055,11 +4035,11 @@ dependencies = [
 
 [[package]]
 name = "thiserror"
-version = "2.0.17"
+version = "2.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f63587ca0f12b72a0600bcba1d40081f830876000bb46dd2337a3051618f4fc8"
+checksum = "4288b5bcbc7920c07a1149a35cf9590a2aa808e0bc1eafaade0b80947865fbc4"
 dependencies = [
- "thiserror-impl 2.0.17",
+ "thiserror-impl 2.0.18",
 ]
 
 [[package]]
@@ -4075,9 +4055,9 @@ dependencies = [
 
 [[package]]
 name = "thiserror-impl"
-version = "2.0.17"
+version = "2.0.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3ff15c8ecd7de3849db632e14d18d2571fa09dfc5ed93479bc4485c7a517c913"
+checksum = "ebc4ee7f67670e9b64d05fa4253e753e016c6c95ff35b89b7941d6b856dec1d5"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -4092,25 +4072,6 @@ checksum = "f60246a4944f24f6e018aa17cdeffb7818b76356965d03b07d6a9886e8962185"
 dependencies = [
  "cfg-if",
 ]
-
-[[package]]
-name = "time"
-version = "0.3.44"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "91e7d9e3bb61134e77bde20dd4825b97c010155709965fedf0f49bb138e52a9d"
-dependencies = [
- "deranged",
- "num-conv",
- "powerfmt",
- "serde",
- "time-core",
-]
-
-[[package]]
-name = "time-core"
-version = "0.1.6"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "40868e7c1d2f0b8d73e4a8c7f0ff63af4f6d19be117e90bd73eb1d62cf831c6b"
 
 [[package]]
 name = "tinystr"
@@ -4230,7 +4191,7 @@ version = "11.1.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "4994acea2522cd2b3b85c1d9529a55991e3ad5e25cdcd3de9d505972c4379424"
 dependencies = [
- "thiserror 2.0.17",
+ "thiserror 2.0.18",
  "ts-rs-macros",
 ]
 
@@ -4411,18 +4372,18 @@ checksum = "ccf3ec651a847eb01de73ccad15eb7d99f80485de043efb2f370cd654f4ea44b"
 
 [[package]]
 name = "wasip2"
-version = "1.0.1+wasi-0.2.4"
+version = "1.0.2+wasi-0.2.9"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0562428422c63773dad2c345a1882263bbf4d65cf3f42e90921f787ef5ad58e7"
+checksum = "9517f9239f02c069db75e65f174b3da828fe5f5b945c4dd26bd25d89c03ebcf5"
 dependencies = [
  "wit-bindgen",
 ]
 
 [[package]]
 name = "wasm-bindgen"
-version = "0.2.105"
+version = "0.2.108"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "da95793dfc411fbbd93f5be7715b0578ec61fe87cb1a42b12eb625caa5c5ea60"
+checksum = "64024a30ec1e37399cf85a7ffefebdb72205ca1c972291c51512360d90bd8566"
 dependencies = [
  "cfg-if",
  "once_cell",
@@ -4433,9 +4394,9 @@ dependencies = [
 
 [[package]]
 name = "wasm-bindgen-macro"
-version = "0.2.105"
+version = "0.2.108"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "04264334509e04a7bf8690f2384ef5265f05143a4bff3889ab7a3269adab59c2"
+checksum = "008b239d9c740232e71bd39e8ef6429d27097518b6b30bdf9086833bd5b6d608"
 dependencies = [
  "quote",
  "wasm-bindgen-macro-support",
@@ -4443,9 +4404,9 @@ dependencies = [
 
 [[package]]
 name = "wasm-bindgen-macro-support"
-version = "0.2.105"
+version = "0.2.108"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "420bc339d9f322e562942d52e115d57e950d12d88983a14c79b86859ee6c7ebc"
+checksum = "5256bae2d58f54820e6490f9839c49780dff84c65aeab9e772f15d5f0e913a55"
 dependencies = [
  "bumpalo",
  "proc-macro2",
@@ -4456,9 +4417,9 @@ dependencies = [
 
 [[package]]
 name = "wasm-bindgen-shared"
-version = "0.2.105"
+version = "0.2.108"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "76f218a38c84bcb33c25ec7059b07847d465ce0e0a76b995e134a45adcb6af76"
+checksum = "1f01b580c9ac74c8d8f0c0e4afb04eeef2acf145458e52c03845ee9cd23e3d12"
 dependencies = [
  "unicode-ident",
 ]
@@ -4740,9 +4701,9 @@ checksum = "d6bbff5f0aada427a1e5a6da5f1f98158182f26556f345ac9e04d36d0ebed650"
 
 [[package]]
 name = "wit-bindgen"
-version = "0.46.0"
+version = "0.51.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f17a85883d4e6d00e8a97c586de764dabcc06133f7f1d55dce5cdc070ad7fe59"
+checksum = "d7249219f66ced02969388cf2bb044a09756a083d0fab1e566056b04d9fbcaa5"
 
 [[package]]
 name = "writeable"
@@ -4787,18 +4748,18 @@ dependencies = [
 
 [[package]]
 name = "zerocopy"
-version = "0.8.27"
+version = "0.8.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "0894878a5fa3edfd6da3f88c4805f4c8558e2b996227a3d864f47fe11e38282c"
+checksum = "fdea86ddd5568519879b8187e1cf04e24fce28f7fe046ceecbce472ff19a2572"
 dependencies = [
  "zerocopy-derive",
 ]
 
 [[package]]
 name = "zerocopy-derive"
-version = "0.8.27"
+version = "0.8.35"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "88d2b8d9c68ad2b9e4340d7832716a4d21a22a1154777ad56ea55c51a9cf3831"
+checksum = "0c15e1b46eff7c6c91195752e0eeed8ef040e391cdece7c25376957d5f15df22"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -4867,6 +4828,6 @@ checksum = "40990edd51aae2c2b6907af74ffb635029d5788228222c4bb811e9351c0caad3"
 
 [[package]]
 name = "zmij"
-version = "1.0.1"
+version = "1.0.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f5858cd3a46fff31e77adea2935e357e3a2538d870741617bfb7c943e218fee6"
+checksum = "02aae0f83f69aafc94776e879363e9771d7ecbffe2c7fbb6c14c5e00dfe88439"

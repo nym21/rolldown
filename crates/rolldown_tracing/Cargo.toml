@@ -1,7 +1,6 @@
 [package]
-name = "rolldown_tracing"
-version = "0.1.0"
-publish = true
+name = "brk_rolldown_tracing"
+version.workspace = true
 description = "rolldown_tracing"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

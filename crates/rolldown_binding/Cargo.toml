@@ -1,7 +1,7 @@
 [package]
-name = "rolldown_binding"
-version = "0.1.0"
-publish = false
+name = "brk_rolldown_binding"
+description = "brk fork of rolldown_binding"
+version.workspace = true
 
 edition.workspace = true
 homepage.workspace = true

@@ -1,6 +1,6 @@
 [package]
-name = "rolldown"
-version = "0.1.0"
+name = "brk_rolldown"
+version.workspace = true
 edition.workspace = true
 homepage.workspace = true
 license.workspace = true
@@ -17,7 +17,7 @@ doctest = false
 workspace = true
 
 [features]
-default = ["serde"]
+default = ["serde", "experimental"]
 serde = ["dep:serde", "oxc_index/serde"]
 testing = []
 experimental = []
@@ -76,9 +76,14 @@ cow-utils = { workspace = true }
 dunce = { workspace = true }
 glob = { workspace = true }
 insta = { workspace = true }
-regex = { workspace = true }
-rolldown_dev = { path = "../rolldown_dev" }
-rolldown_testing = { path = "../rolldown_testing" }
+# <<<<<<< Updated upstream
+# regex = { workspace = true }
+# rolldown_dev = { path = "../rolldown_dev" }
+# rolldown_testing = { path = "../rolldown_testing" }
+# =======
+# rolldown_dev = { path = "../rolldown_dev" }
+# rolldown_testing = { workspace = true }
+# >>>>>>> Stashed changes
 rolldown_workspace = { workspace = true }
 serde = { workspace = true, features = ["derive"] }
 serde_json = { workspace = true }
